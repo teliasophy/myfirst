@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
 import './plugins/element.js'
-import '@/assets/css/reset.css'
+import '@/assets/css/global.css'
 import router from './router'
 import MyHttpServer from './plugins/http.js'
 

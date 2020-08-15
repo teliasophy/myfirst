@@ -60,7 +60,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="less" scoped>
 .login-wrap {
   height: 100%;
   background-color: #324152;

@@ -1,6 +1,8 @@
 <template>
   <el-container class="container">
-    <el-header class="header">Header</el-header>
+    <el-header class="header">
+      <el-button type="info" @click="logout">退出</el-button>
+    </el-header>
     <el-container>
       <el-aside class="aside" width="200px">Aside</el-aside>
       <el-main class="main">Main</el-main>
@@ -9,10 +11,17 @@
 </template>
 
 <script>
-export default {}
+export default {
+  methods: {
+    logout() {
+      window.sessionStorage.clear()
+      this.$router.push('/login')
+    }
+  }
+}
 </script>
 
-<style>
+<style lang="less" scoped>
 .el-header {
   background-color: #b3c0d1;
   color: #333;
