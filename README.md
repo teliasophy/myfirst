@@ -6,7 +6,8 @@
 
 ### 导航路由守护--->访问权限 beforeEach()
 
-`javascript`// 为路由对象，添加 beforeEach 导航守卫
+`````javascript
+// 为路由对象，添加 beforeEach 导航守卫
 router.beforeEach((to,from,next) => {
 //如果用户访问的登录页，直接放行
 if(to.path === '/login') return next()
@@ -16,8 +17,9 @@ const tokenStr = window.sessionStorage.getItem('token')
 if(!tokenStr) return next('/login')
 //所有通过后，放行
 next()
-})`javascript`
+}) ````
 
 ### 退出
 
 清除 token 即可
+`````
